@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  StarbucksApp
 //
 //  Created by 신민희 on 2021/05/20.
@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     var gradientLayer: CAGradientLayer!
     let mainLabel = UILabel()
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 }
 
 
-extension ViewController: UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
@@ -30,25 +30,28 @@ extension ViewController: UITableViewDataSource {
         guard let MenuTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as? MenuTableViewCell else { fatalError() }
         switch indexPath {
         case [0, 0]:
+            print("123")
             guard let FrequencyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FrequencyTableViewCell", for: indexPath) as? FrequencyTableViewCell else { fatalError() }
+            FrequencyTableViewCell.frequencyBackgroundView.backgroundColor = .blue
+            FrequencyTableViewCell.frequencyLabel.text = "21 Summer e-Frequency"
         case [0, 1]:
             guard let MenuTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as? MenuTableViewCell else { fatalError() }
-        case [0, 2]:
-            guard let EventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
-        case [0, 3]:
-            guard let EventTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventTableViewCell", for: indexPath) as? EventTableViewCell else { fatalError() }
-        case [0, 4]:
-            guard let PopularDrinksTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PopularDrinksTableViewCell", for: indexPath) as? PopularDrinksTableViewCell else { fatalError() }
-        case [0, 5]:
-            guard let EventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
-        case [0, 6]:
-            guard let EventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
-        case [0, 7]:
-            guard let EventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
-        case [0, 8]:
-            guard let EventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
-        case [0, 9]:
-            guard let EventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
+//        case [0, 2]:
+//            guard let EventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
+//        case [0, 3]:
+//            guard let EventTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventTableViewCell", for: indexPath) as? EventTableViewCell else { fatalError() }
+//        case [0, 4]:
+//            guard let PopularDrinksTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PopularDrinksTableViewCell", for: indexPath) as? PopularDrinksTableViewCell else { fatalError() }
+//        case [0, 5]:
+//            guard let EventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
+//        case [0, 6]:
+//            guard let EventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
+//        case [0, 7]:
+//            guard let EventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
+//        case [0, 8]:
+//            guard let EventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
+//        case [0, 9]:
+//            guard let EventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
         default:
             break
         }
@@ -56,11 +59,11 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController {
+extension HomeViewController {
     func setUI() {
+        setGradientLayer()
         setLayout()
         setBasic()
-        setGradientLayer()
         setTableView()
         
     }
@@ -83,11 +86,10 @@ extension ViewController {
         mainLabel.font = UIFont.systemFont(ofSize: 25, weight: .semibold)
         mainLabel.numberOfLines = 2
         mainLabel.textAlignment = .left
-        mainLabel.backgroundColor = .red
     }
     func setTableView() {
         mainTableView.dataSource = self
-        mainTableView.rowHeight = 150
+        mainTableView.rowHeight = 200
         mainTableView.register(FrequencyTableViewCell.self, forCellReuseIdentifier: "FrequencyTableViewCell")
         mainTableView.register(MenuTableViewCell.self, forCellReuseIdentifier: "MenuTableViewCell")
         mainTableView.register(MenuTableViewCell.self, forCellReuseIdentifier: "EventImageTableViewCell")

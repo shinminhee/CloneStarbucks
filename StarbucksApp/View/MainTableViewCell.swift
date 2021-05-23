@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class FrequencyTableViewCell: UITableViewCell {
     let frequencyBackgroundView = UIView()
@@ -27,6 +28,16 @@ class FrequencyTableViewCell: UITableViewCell {
         
     }
     func setLayout() {
+        contentView.addSubview(frequencyBackgroundView)
+        frequencyBackgroundView.snp.makeConstraints {
+            $0.top.leading.trailing.bottom.equalToSuperview().inset(10)
+        }
+        contentView.addSubview(frequencyLabel)
+        frequencyLabel.snp.makeConstraints {
+            $0.leading.top.trailing.equalTo(frequencyBackgroundView).inset(20)
+            $0.height.equalTo(30)
+            
+        }
         
     }
 

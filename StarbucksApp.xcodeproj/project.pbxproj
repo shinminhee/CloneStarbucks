@@ -9,22 +9,30 @@
 /* Begin PBXBuildFile section */
 		5E6975B626562C470061F2BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975B526562C470061F2BE /* AppDelegate.swift */; };
 		5E6975B826562C480061F2BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975B726562C480061F2BE /* SceneDelegate.swift */; };
-		5E6975BA26562C480061F2BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975B926562C480061F2BE /* ViewController.swift */; };
+		5E6975BA26562C480061F2BE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975B926562C480061F2BE /* HomeViewController.swift */; };
 		5E6975BF26562C4A0061F2BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E6975BE26562C4A0061F2BE /* Assets.xcassets */; };
 		5E6975C226562C4A0061F2BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E6975C026562C4A0061F2BE /* LaunchScreen.storyboard */; };
 		5E6975CD265634F00061F2BE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5E6975CC265634F00061F2BE /* SnapKit */; };
 		5E6975D0265638A30061F2BE /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975CF265638A30061F2BE /* MainTableViewCell.swift */; };
+		5E6975D52658CDC70061F2BE /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975D42658CDC70061F2BE /* PayViewController.swift */; };
+		5E6975D82658CDD70061F2BE /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975D72658CDD70061F2BE /* OrderViewController.swift */; };
+		5E6975DB2658CDEA0061F2BE /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975DA2658CDEA0061F2BE /* GiftViewController.swift */; };
+		5E6975DE2658CDF80061F2BE /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975DD2658CDF80061F2BE /* OtherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5E6975B226562C470061F2BE /* StarbucksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarbucksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E6975B526562C470061F2BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E6975B726562C480061F2BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5E6975B926562C480061F2BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5E6975B926562C480061F2BE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5E6975BE26562C4A0061F2BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E6975C126562C4A0061F2BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E6975C326562C4A0061F2BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E6975CF265638A30061F2BE /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		5E6975D42658CDC70061F2BE /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
+		5E6975D72658CDD70061F2BE /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		5E6975DA2658CDEA0061F2BE /* GiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
+		5E6975DD2658CDF80061F2BE /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,15 +66,51 @@
 		5E6975B426562C470061F2BE /* StarbucksApp */ = {
 			isa = PBXGroup;
 			children = (
-				5E6975B526562C470061F2BE /* AppDelegate.swift */,
-				5E6975B726562C480061F2BE /* SceneDelegate.swift */,
-				5E6975B926562C480061F2BE /* ViewController.swift */,
-				5E6975CF265638A30061F2BE /* MainTableViewCell.swift */,
+				5E6975E02658CDFB0061F2BE /* Models */,
+				5E6975E12658CE060061F2BE /* View */,
+				5E6975E22658CE0D0061F2BE /* Controller */,
+				5E6975E52658FBF70061F2BE /* Supports */,
 				5E6975BE26562C4A0061F2BE /* Assets.xcassets */,
 				5E6975C026562C4A0061F2BE /* LaunchScreen.storyboard */,
 				5E6975C326562C4A0061F2BE /* Info.plist */,
 			);
 			path = StarbucksApp;
+			sourceTree = "<group>";
+		};
+		5E6975E02658CDFB0061F2BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5E6975E12658CE060061F2BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E6975CF265638A30061F2BE /* MainTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5E6975E22658CE0D0061F2BE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5E6975B926562C480061F2BE /* HomeViewController.swift */,
+				5E6975D42658CDC70061F2BE /* PayViewController.swift */,
+				5E6975D72658CDD70061F2BE /* OrderViewController.swift */,
+				5E6975DA2658CDEA0061F2BE /* GiftViewController.swift */,
+				5E6975DD2658CDF80061F2BE /* OtherViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5E6975E52658FBF70061F2BE /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				5E6975B526562C470061F2BE /* AppDelegate.swift */,
+				5E6975B726562C480061F2BE /* SceneDelegate.swift */,
+			);
+			path = Supports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,10 +188,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E6975BA26562C480061F2BE /* ViewController.swift in Sources */,
+				5E6975BA26562C480061F2BE /* HomeViewController.swift in Sources */,
+				5E6975D52658CDC70061F2BE /* PayViewController.swift in Sources */,
 				5E6975B626562C470061F2BE /* AppDelegate.swift in Sources */,
 				5E6975D0265638A30061F2BE /* MainTableViewCell.swift in Sources */,
 				5E6975B826562C480061F2BE /* SceneDelegate.swift in Sources */,
+				5E6975DE2658CDF80061F2BE /* OtherViewController.swift in Sources */,
+				5E6975DB2658CDEA0061F2BE /* GiftViewController.swift in Sources */,
+				5E6975D82658CDD70061F2BE /* OrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
