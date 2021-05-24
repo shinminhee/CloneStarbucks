@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
 
     var gradientLayer: CAGradientLayer!
     let mainLabel = UILabel()
-    let mainTableView = UITableView()
+    let mainTableView = UITableView(frame: .zero, style: .grouped)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +27,16 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let FrequencyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FrequencyTableViewCell", for: indexPath) as? FrequencyTableViewCell else { fatalError() }
-        guard let MenuTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as? MenuTableViewCell else { fatalError() }
         switch indexPath {
         case [0, 0]:
+            guard let FrequencyTableViewCell = tableView.dequeueReusableCell(withIdentifier: FrequencyTableViewCell.identifier, for: indexPath) as? FrequencyTableViewCell else { fatalError() }
+            //너는 지금 정확히 모를거야 너는 FrequencyTableViewCell 야 너 원래 uitableviewcell이잖아
             FrequencyTableViewCell.setUI()
+            return FrequencyTableViewCell
         case [0, 1]:
+            guard let MenuTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as? MenuTableViewCell else { fatalError() }
             MenuTableViewCell.setUI()
+            return MenuTableViewCell
 //        case [0, 2]:
 //            guard let EventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
 //        case [0, 3]:
@@ -51,9 +54,8 @@ extension HomeViewController: UITableViewDataSource {
 //        case [0, 9]:
 //            guard let EventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
         default:
-            break
+            return UITableViewCell()
         }
-        return MenuTableViewCell
     }
 }
 
@@ -88,7 +90,8 @@ extension HomeViewController {
     func setTableView() {
         mainTableView.dataSource = self
         mainTableView.rowHeight = 220
-        mainTableView.register(FrequencyTableViewCell.self, forCellReuseIdentifier: "FrequencyTableViewCell")
+        
+        mainTableView.register(FrequencyTableViewCell.self, forCellReuseIdentifier: FrequencyTableViewCell.identifier)
         mainTableView.register(MenuTableViewCell.self, forCellReuseIdentifier: "MenuTableViewCell")
         mainTableView.register(MenuTableViewCell.self, forCellReuseIdentifier: "EventImageTableViewCell")
         mainTableView.register(MenuTableViewCell.self, forCellReuseIdentifier: "EventTableViewCell")

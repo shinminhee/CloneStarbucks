@@ -9,6 +9,8 @@ import UIKit
 import SnapKit
 
 class FrequencyTableViewCell: UITableViewCell {
+    
+    static let identifier = "FrequencyTableViewCell"
     let frequencyBackgroundView = UIView()
     let frequencyLabel = UILabel()
     
@@ -70,11 +72,11 @@ class MenuTableViewCell: UITableViewCell {
         menuCollectionLayout.minimumInteritemSpacing = 0
         menuCollectionLayout.minimumLineSpacing = 0
         menuCollectionLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        menuCollectionLayout.itemSize = CGSize(width: 180, height: 180)
+        menuCollectionLayout.itemSize = CGSize(width: 140, height: 140)
 
         menuCollectionView.register(MenuCollectionViewCell.self, forCellWithReuseIdentifier: "MenuCollectionViewCell")
         menuCollectionView.dataSource = self
-        menuCollectionView.backgroundColor = .blue
+        menuCollectionView.backgroundColor = .white
     }
     func setLayout() {
         [menuCollectionView, customLabel].forEach {
@@ -98,6 +100,7 @@ extension MenuTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MenuCollectionViewCell.identifier, for: indexPath) as? MenuCollectionViewCell else { fatalError() }
         cell.menuImage.backgroundColor = .systemPink
+        cell.menuImage.layer.cornerRadius = 50
         cell.menuLable.text = "음료이름"
         return cell
     }
