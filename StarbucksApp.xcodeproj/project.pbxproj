@@ -18,6 +18,7 @@
 		5E6975D82658CDD70061F2BE /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975D72658CDD70061F2BE /* OrderViewController.swift */; };
 		5E6975DB2658CDEA0061F2BE /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975DA2658CDEA0061F2BE /* GiftViewController.swift */; };
 		5E6975DE2658CDF80061F2BE /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975DD2658CDF80061F2BE /* OtherViewController.swift */; };
+		5E6975E9265B6EE70061F2BE /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975E8265B6EE70061F2BE /* MenuCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		5E6975D72658CDD70061F2BE /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		5E6975DA2658CDEA0061F2BE /* GiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
 		5E6975DD2658CDF80061F2BE /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
+		5E6975E8265B6EE70061F2BE /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				5E6975CF265638A30061F2BE /* MainTableViewCell.swift */,
+				5E6975E8265B6EE70061F2BE /* MenuCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			files = (
 				5E6975BA26562C480061F2BE /* HomeViewController.swift in Sources */,
 				5E6975D52658CDC70061F2BE /* PayViewController.swift in Sources */,
+				5E6975E9265B6EE70061F2BE /* MenuCollectionViewCell.swift in Sources */,
 				5E6975B626562C470061F2BE /* AppDelegate.swift in Sources */,
 				5E6975D0265638A30061F2BE /* MainTableViewCell.swift in Sources */,
 				5E6975B826562C480061F2BE /* SceneDelegate.swift in Sources */,

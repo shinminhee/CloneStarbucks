@@ -27,15 +27,13 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let FrequencyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FrequencyTableViewCell", for: indexPath) as? FrequencyTableViewCell else { fatalError() }
         guard let MenuTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as? MenuTableViewCell else { fatalError() }
         switch indexPath {
         case [0, 0]:
-            print("123")
-            guard let FrequencyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FrequencyTableViewCell", for: indexPath) as? FrequencyTableViewCell else { fatalError() }
-            FrequencyTableViewCell.frequencyBackgroundView.backgroundColor = .blue
-            FrequencyTableViewCell.frequencyLabel.text = "21 Summer e-Frequency"
+            FrequencyTableViewCell.setUI()
         case [0, 1]:
-            guard let MenuTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as? MenuTableViewCell else { fatalError() }
+            MenuTableViewCell.setUI()
 //        case [0, 2]:
 //            guard let EventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
 //        case [0, 3]:
@@ -89,7 +87,7 @@ extension HomeViewController {
     }
     func setTableView() {
         mainTableView.dataSource = self
-        mainTableView.rowHeight = 200
+        mainTableView.rowHeight = 220
         mainTableView.register(FrequencyTableViewCell.self, forCellReuseIdentifier: "FrequencyTableViewCell")
         mainTableView.register(MenuTableViewCell.self, forCellReuseIdentifier: "MenuTableViewCell")
         mainTableView.register(MenuTableViewCell.self, forCellReuseIdentifier: "EventImageTableViewCell")
