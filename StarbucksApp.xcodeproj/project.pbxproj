@@ -19,6 +19,12 @@
 		5E6975DB2658CDEA0061F2BE /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975DA2658CDEA0061F2BE /* GiftViewController.swift */; };
 		5E6975DE2658CDF80061F2BE /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975DD2658CDF80061F2BE /* OtherViewController.swift */; };
 		5E6975E9265B6EE70061F2BE /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975E8265B6EE70061F2BE /* MenuCollectionViewCell.swift */; };
+		5E6975EC265CAE940061F2BE /* What'sViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975EB265CAE940061F2BE /* What'sViewController.swift */; };
+		5E6975EF265CEB310061F2BE /* AllEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975EE265CEB310061F2BE /* AllEventTableViewCell.swift */; };
+		5E6975F3265D02B20061F2BE /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975F2265D02B20061F2BE /* MenuTableViewCell.swift */; };
+		5E6975F6265D02E60061F2BE /* EventImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975F5265D02E50061F2BE /* EventImageTableViewCell.swift */; };
+		5E6975F9265D03080061F2BE /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975F8265D03080061F2BE /* EventTableViewCell.swift */; };
+		5E6975FC265D03250061F2BE /* PopularDrinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975FB265D03250061F2BE /* PopularDrinksTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,12 @@
 		5E6975DA2658CDEA0061F2BE /* GiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
 		5E6975DD2658CDF80061F2BE /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		5E6975E8265B6EE70061F2BE /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		5E6975EB265CAE940061F2BE /* What'sViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "What'sViewController.swift"; sourceTree = "<group>"; };
+		5E6975EE265CEB310061F2BE /* AllEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEventTableViewCell.swift; sourceTree = "<group>"; };
+		5E6975F2265D02B20061F2BE /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		5E6975F5265D02E50061F2BE /* EventImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventImageTableViewCell.swift; sourceTree = "<group>"; };
+		5E6975F8265D03080061F2BE /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		5E6975FB265D03250061F2BE /* PopularDrinksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDrinksTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +102,12 @@
 			isa = PBXGroup;
 			children = (
 				5E6975CF265638A30061F2BE /* MainTableViewCell.swift */,
+				5E6975F2265D02B20061F2BE /* MenuTableViewCell.swift */,
 				5E6975E8265B6EE70061F2BE /* MenuCollectionViewCell.swift */,
+				5E6975F5265D02E50061F2BE /* EventImageTableViewCell.swift */,
+				5E6975FB265D03250061F2BE /* PopularDrinksTableViewCell.swift */,
+				5E6975F8265D03080061F2BE /* EventTableViewCell.swift */,
+				5E6975EE265CEB310061F2BE /* AllEventTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,6 +120,7 @@
 				5E6975D72658CDD70061F2BE /* OrderViewController.swift */,
 				5E6975DA2658CDEA0061F2BE /* GiftViewController.swift */,
 				5E6975DD2658CDF80061F2BE /* OtherViewController.swift */,
+				5E6975EB265CAE940061F2BE /* What'sViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,13 +210,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E6975BA26562C480061F2BE /* HomeViewController.swift in Sources */,
+				5E6975EF265CEB310061F2BE /* AllEventTableViewCell.swift in Sources */,
+				5E6975F3265D02B20061F2BE /* MenuTableViewCell.swift in Sources */,
 				5E6975D52658CDC70061F2BE /* PayViewController.swift in Sources */,
+				5E6975F9265D03080061F2BE /* EventTableViewCell.swift in Sources */,
 				5E6975E9265B6EE70061F2BE /* MenuCollectionViewCell.swift in Sources */,
 				5E6975B626562C470061F2BE /* AppDelegate.swift in Sources */,
 				5E6975D0265638A30061F2BE /* MainTableViewCell.swift in Sources */,
 				5E6975B826562C480061F2BE /* SceneDelegate.swift in Sources */,
 				5E6975DE2658CDF80061F2BE /* OtherViewController.swift in Sources */,
 				5E6975DB2658CDEA0061F2BE /* GiftViewController.swift in Sources */,
+				5E6975FC265D03250061F2BE /* PopularDrinksTableViewCell.swift in Sources */,
+				5E6975EC265CAE940061F2BE /* What'sViewController.swift in Sources */,
+				5E6975F6265D02E60061F2BE /* EventImageTableViewCell.swift in Sources */,
 				5E6975D82658CDD70061F2BE /* OrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
