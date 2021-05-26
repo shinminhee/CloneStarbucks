@@ -13,7 +13,10 @@ class HomeViewController: UIViewController {
     var gradientLayer: CAGradientLayer!
     let mainLabel = UILabel()
     let mainTableView = UITableView(frame: .zero, style: .grouped)
-
+    let whatButton = UIButton()
+    let couponButton = UIButton()
+    let alarmButton = UIButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -53,29 +56,61 @@ extension HomeViewController: UITableViewDataSource {
             return eventImageTableViewCell
         case [0, 3]:
             guard let menuTableViewCell = tableView.dequeueReusableCell(withIdentifier: MenuTableViewCell.identifier, for: indexPath) as? MenuTableViewCell else { fatalError() }
+            
             menuTableViewCell.customLabel.text = "Events"
             menuTableViewCell.customLabel.font = UIFont.boldSystemFont(ofSize: 25)
             menuTableViewCell.seeAllButton.setTitle("See all", for: .normal)
             menuTableViewCell.seeAllButton.setTitleColor(.green, for: .normal)
             menuTableViewCell.seeAllButton.addTarget(self, action: #selector(tapedSeeAll(_:)), for: .touchUpInside)
+            menuTableViewCell.menuCollectionLayout.itemSize = CGSize(width: 160, height: 140)
             return menuTableViewCell
         case [0, 4]:
-            guard let popularDrinksTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PopularDrinksTableViewCell", for: indexPath) as? PopularDrinksTableViewCell else { fatalError() }
-        case [0, 5]:
-            guard let eventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
-        case [0, 6]:
-            guard let eventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
-        case [0, 7]:
-            guard let eventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
-        case [0, 8]:
-            guard let eventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
-        case [0, 9]:
-            guard let eventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventImageTableViewCell", for: indexPath) as? EventImageTableViewCell else { fatalError() }
+            guard let menuTableViewCell = tableView.dequeueReusableCell(withIdentifier: MenuTableViewCell.identifier, for: indexPath) as? MenuTableViewCell else { fatalError() }
+            menuTableViewCell.customLabel.text = "이 시간대 인기 메뉴"
+            menuTableViewCell.customLabel.font = UIFont.boldSystemFont(ofSize: 25)
+            menuTableViewCell.menuCollectionLayout.itemSize = CGSize(width: 140, height: 140)
+
+            return menuTableViewCell
+        case [0, 5], [0, 6], [0, 7], [0, 8], [0, 9]:
+            guard let eventImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: EventImageTableViewCell.identifier, for: indexPath) as? EventImageTableViewCell else { fatalError() }
+            eventImageTableViewCell.largeImageView.backgroundColor = .systemPink
+            return eventImageTableViewCell
         default:
             return UITableViewCell()
         }
     }
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
+    {
+        let frame: CGRect = tableView.frame
+
+        let DoneBut: UIButton = UIButton(frame: CGRect(x: frame.size.width - 200, y: 0, width: 150, height: 50)) //
+
+        DoneBut.setTitle("Done", for: .normal)
+        DoneBut.backgroundColor = UIColor.red
+
+        DoneBut.addTarget(self, action: #selector(tapedSeeAll(_:)), for: .touchUpInside)
+
+        DoneBut.backgroundColor = UIColor.blue
+
+        let headerView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
+        headerView.backgroundColor = UIColor.red
+        headerView.addSubview(DoneBut)
+        return headerView
+    }
+
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50.0
+    }
+
+    func buttonTapped(sender: UIButton) {
+        //Button Tapped and open your another ViewController
+
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+      return "What's New"
+    }
 }
+
 
 extension HomeViewController {
     func setUI() {
@@ -112,8 +147,8 @@ extension HomeViewController {
         mainTableView.register(FrequencyTableViewCell.self, forCellReuseIdentifier: FrequencyTableViewCell.identifier)
         mainTableView.register(MenuTableViewCell.self, forCellReuseIdentifier: MenuTableViewCell.identifier)
         mainTableView.register(EventImageTableViewCell.self, forCellReuseIdentifier: EventImageTableViewCell.identifier)
-        mainTableView.register(MenuTableViewCell.self, forCellReuseIdentifier: EventTableViewCell.identifier)
-        mainTableView.register(MenuTableViewCell.self, forCellReuseIdentifier: PopularDrinksTableViewCell.identifier)
+        mainTableView.register(EventTableViewCell.self, forCellReuseIdentifier: EventTableViewCell.identifier)
+        mainTableView.register(PopularDrinksTableViewCell.self, forCellReuseIdentifier: PopularDrinksTableViewCell.identifier)
 
     }
     func setGradientLayer() {

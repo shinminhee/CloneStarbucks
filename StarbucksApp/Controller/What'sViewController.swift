@@ -9,7 +9,7 @@ import UIKit
 
 class What_sViewController: UIViewController {
     
-    let eventTableView = UITableView()
+    let eventTableView = UITableView(frame: .zero, style: .grouped)
     
 
     override func viewDidLoad() {
@@ -27,10 +27,9 @@ extension What_sViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: AllEventTableViewCell.identifier, for: indexPath) as? AllEventTableViewCell else { fatalError() }
+        return cell
     }
-    
-    
 }
 
 extension What_sViewController {
@@ -41,6 +40,8 @@ extension What_sViewController {
     func setBasic() {
         eventTableView.rowHeight = 100
         eventTableView.dataSource = self
+        eventTableView.register(AllEventTableViewCell.self, forCellReuseIdentifier: AllEventTableViewCell.identifier)
+
     }
     
     func setLayout() {

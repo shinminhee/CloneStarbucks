@@ -25,6 +25,7 @@
 		5E6975F6265D02E60061F2BE /* EventImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975F5265D02E50061F2BE /* EventImageTableViewCell.swift */; };
 		5E6975F9265D03080061F2BE /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975F8265D03080061F2BE /* EventTableViewCell.swift */; };
 		5E6975FC265D03250061F2BE /* PopularDrinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6975FB265D03250061F2BE /* PopularDrinksTableViewCell.swift */; };
+		5E697602265E4D530061F2BE /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E697601265E4D530061F2BE /* TestTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		5E6975F5265D02E50061F2BE /* EventImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventImageTableViewCell.swift; sourceTree = "<group>"; };
 		5E6975F8265D03080061F2BE /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		5E6975FB265D03250061F2BE /* PopularDrinksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDrinksTableViewCell.swift; sourceTree = "<group>"; };
+		5E697601265E4D530061F2BE /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				5E6975CF265638A30061F2BE /* MainTableViewCell.swift */,
 				5E6975F2265D02B20061F2BE /* MenuTableViewCell.swift */,
 				5E6975E8265B6EE70061F2BE /* MenuCollectionViewCell.swift */,
+				5E697601265E4D530061F2BE /* TestTableViewCell.swift */,
 				5E6975F5265D02E50061F2BE /* EventImageTableViewCell.swift */,
 				5E6975FB265D03250061F2BE /* PopularDrinksTableViewCell.swift */,
 				5E6975F8265D03080061F2BE /* EventTableViewCell.swift */,
@@ -214,6 +217,7 @@
 				5E6975F3265D02B20061F2BE /* MenuTableViewCell.swift in Sources */,
 				5E6975D52658CDC70061F2BE /* PayViewController.swift in Sources */,
 				5E6975F9265D03080061F2BE /* EventTableViewCell.swift in Sources */,
+				5E697602265E4D530061F2BE /* TestTableViewCell.swift in Sources */,
 				5E6975E9265B6EE70061F2BE /* MenuCollectionViewCell.swift in Sources */,
 				5E6975B626562C470061F2BE /* AppDelegate.swift in Sources */,
 				5E6975D0265638A30061F2BE /* MainTableViewCell.swift in Sources */,
